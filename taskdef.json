@@ -2,7 +2,7 @@
     "executionRoleArn": "arn:aws:iam::<AWS_ACCOUNT_ID>:role/<APP_NAME>_ecsTaskExecutionRole",
     "containerDefinitions": [
       {
-        "name": "<APP_NAME>_nginx-rp",
+        "name": "<APP_NAME>-rp",
         "image": "gnokoheat/ecs-reverse-proxy:latest",
         "essential": true,
         "memoryReservation": <MEMORY_RESV>,
