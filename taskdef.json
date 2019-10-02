@@ -1,0 +1,58 @@
+{
+    "executionRoleArn": "arn:aws:iam::<AWS_ACCOUNT_ID>:role/<APP_NAME>_ecsTaskExecutionRole",
+    "containerDefinitions": [
+      {
+        "name": "<APP_NAME>_nginx-rp",
+        "image": "gnokoheat/ecs-reverse-proxy:latest",
+        "essential": true,
+        "memoryReservation": <MEMORY_RESV>,
+        "portMappings": [
+          {
+            "hostPort": 0,
+            "containerPort": 80,
+            "protocol": "tcp"
+          }
+        ],
+        "links": [
+          "<APP_NAME>"
+        ],
+        "environment": [
+          {
+            "name": "LINK_PORT",
+            "value": "<SERVICE_PORT>"
+          },
+          {
+            "name": "LINK_APP",
+            "value": "<APP_NAME>"
+          }
+        ]
+      },
+      {
+        "name": "<APP_NAME>",
+        "image": "<IMAGE_NAME>",
+        "essential": true,
+        "memoryReservation": <MEMORY_RESV>,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": <SERVICE_PORT>
+          }
+        ],
+        "environment": [
+          {
+            "name": "PORT",
+            "value": "<SERVICE_PORT>"
+          },
+          {
+            "name": "APP_NAME",
+            "value": "<APP_NAME>"
+          }
+        ]
+      }
+    ],
+    "requiresCompatibilities": [
+      "EC2"
+    ],
+    "networkMode": "bridge",
+    "family": "<APP_NAME>"
+  }
