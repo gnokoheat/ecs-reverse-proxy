@@ -1,5 +1,5 @@
 # ecs-reverse-proxy
-![GitHub](https://img.shields.io/github/license/gnokoheat/ecs-reverse-proxy) ![Docker Pulls](https://img.shields.io/docker/pulls/gnokoheat/ecs-reverse-proxy) ![GitHub repo size](https://img.shields.io/github/repo-size/gnokoheat/ecs-reverse-proxy)
+![GitHub](https://img.shields.io/github/license/gnokoheat/ecs-reverse-proxy) ![Docker Pulls](https://img.shields.io/docker/pulls/gnokoheat/ecs-reverse-proxy) ![GitHub repo size](https://img.shields.io/github/repo-size/gnokoheat/ecs-reverse-proxy) ![GitHub last commit](https://img.shields.io/github/last-commit/gnokoheat/ecs-reverse-proxy)
 
 **AWS ECS reverse proxy using HA Proxy**
 
