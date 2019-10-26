@@ -5,6 +5,8 @@
 
 - In case of dynamic port mapping, you can set HA-Proxy revere proxy container linking your app container.
 
+![](ecs-reverse-proxy.png)
+
 ## Related
 
 - ECS Node.js app example : https://github.com/gnokoheat/ecs-nodejs-app-example
