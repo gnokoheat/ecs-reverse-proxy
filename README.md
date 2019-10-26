@@ -13,3 +13,45 @@
 ```
 docker pull gnokoheat/ecs-reverse-proxy:latest
 ```
+
+## Usage
+
+- Environment variables for linking with app : `LINK_APP`, `LINK_PORT`
+- Task definition (taskdef.json) example
+
+```
+"containerDefinitions": [
+      // 1. reverse proxy container
+      {
+        "name": "<APP_NAME>-rp",
+        "image": "gnokoheat/ecs-reverse-proxy:latest",
+        "essential": true,
+        "memoryReservation": 128,
+        "portMappings": [
+          {
+            "hostPort": 0,
+            "containerPort": 80,
+            "protocol": "tcp"
+          }
+        ],
+        "links": [
+          "<APP_NAME>"
+        ],
+        "environment": [
+          {
+            "name": "LINK_PORT",
+            "value": "<SERVICE_PORT>"
+          },
+          {
+            "name": "LINK_APP",
+            "value": "<APP_NAME>"
+          }
+        ]
+      },
+      // 2. app container
+      {
+        "name": "<APP_NAME>",
+        ...
+      }
+]
+```
