@@ -5,7 +5,7 @@
 
 - In case of dynamic port mapping, you can set HA-Proxy revere proxy container linking your app container.
 
-![](ecs-reverse-proxy.png)
+![](https://github.com/gnokoheat/ecs-reverse-proxy/blob/master/ecs-reverse-proxy.png)
 
 ## Related
 
