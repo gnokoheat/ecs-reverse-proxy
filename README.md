@@ -7,15 +7,6 @@
 
 ![](https://github.com/gnokoheat/ecs-reverse-proxy/blob/master/ecs-reverse-proxy.png?raw=true)
 
-## Related
-
-- ECS Node.js app example : https://github.com/gnokoheat/ecs-nodejs-app-example
-- Infra code (Terraform) for this app : https://github.com/gnokoheat/ecs-with-codepipeline-example-by-terraform
-- Get the docker hub image
-```
-docker pull gnokoheat/ecs-reverse-proxy:latest
-```
-
 ## Usage
 
 - Environment variables for linking with app : `LINK_APP`, `LINK_PORT`
@@ -57,3 +48,13 @@ docker pull gnokoheat/ecs-reverse-proxy:latest
       }
 ]
 ```
+
+- Get the docker hub image
+```
+docker pull gnokoheat/ecs-reverse-proxy:latest
+```
+
+## Related
+
+- ECS Node.js app example : https://github.com/gnokoheat/ecs-nodejs-app-example
+- Infra code (Terraform) for this app : https://github.com/gnokoheat/ecs-with-codepipeline-example-by-terraform
